@@ -1,0 +1,74 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+
+  background-image: url('photo_2025-05-30_23-05-26.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+
+  height: 150vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 600px;
+  padding: 30px;
+  background-color: rgb(161, 234, 242);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.2);
+}
+
+.note h1 {
+  color: #ff5e8e;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.note p {
+  font-size: 1.05rem;
+  color: #444;
+  line-height: 1.6;
+  text-align: justify;
+}
+.floating-name {
+  position: absolute;
+  top: 20%;
+  left: -200px;
+  font-size: 1.5rem;
+  color: #e20c77;
+  font-weight: bold;
+  animation: floatName 12s linear infinite;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+@keyframes floatName {
+  0% {
+    left: -200px;
+    top: 10%;
+    transform: rotate(0deg);
+  }
+  25% {
+    top: 30%;
+    transform: rotate(5deg);
+  }
+  50% {
+    left: 100%;
+    top: 50%;
+    transform: rotate(-5deg);
+  }
+  75% {
+    top: 70%;
+    transform: rotate(3deg);
+  }
+  100% {
+    left: -200px;
+    top: 90%;
+    transform: rotate(0deg);
+  }
+}

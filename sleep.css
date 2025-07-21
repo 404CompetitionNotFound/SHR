@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+
+  background-image: url('photo_2025-05-30_23-06-10.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background: #60b8ef;
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+  text-align: center;
+  position: relative;
+  width: 90%;
+  max-width: 360px;
+}
+
+.emoji {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+  animation: float 2s ease-in-out infinite;
+}
+
+.title {
+  color: #ff4f8b;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.message {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.extra {
+  margin: 10px 0;
+  font-size: 0.95rem;
+  color: #777;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #ff4f8b;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #ff2c6c;
+}
+
+.heart-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  animation: floatUp 2s linear forwards;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-250px);
+    opacity: 0;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
